@@ -1,28 +1,39 @@
-import { useState } from 'react'
+import React from 'react';
+import Hero from './components/Hero';
+import TechOverview from './components/TechOverview';
+import Applications from './components/Applications';
+import Achievements from './components/Achievements';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen w-full bg-[#0b0f1a] font-inter antialiased">
+      <Hero />
+      <TechOverview />
+      <Applications />
+      <Achievements />
+
+      <footer id="contact" className="border-t border-white/10 bg-[#070b13] py-12 text-white">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+            <div>
+              <h4 className="text-lg font-semibold">Neural Drive</h4>
+              <p className="mt-1 text-sm text-white/70">
+                Singapore • Silent-Speech Interface (SSI) — brain–computer interface for everyone.
+              </p>
+            </div>
+            <div className="flex gap-3 text-sm text-white/70">
+              <a href="#technology" className="hover:text-white">Technology</a>
+              <span className="text-white/30">•</span>
+              <a href="#applications" className="hover:text-white">Applications</a>
+              <span className="text-white/30">•</span>
+              <a href="#contact" className="hover:text-white">Contact</a>
+            </div>
+          </div>
+          <p className="mt-6 text-xs text-white/50">© {new Date().getFullYear()} Neural Drive — All rights reserved.</p>
         </div>
-      </div>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
