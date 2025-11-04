@@ -1,32 +1,30 @@
 import React from 'react';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import TechOverview from './components/TechOverview';
-import Applications from './components/Applications';
-import Achievements from './components/Achievements';
+import Differentiation from './components/Differentiation';
+import RoadmapTeam from './components/RoadmapTeam';
 
 function App() {
   return (
     <div className="min-h-screen w-full bg-[#070a12] font-inter antialiased">
+      <Navbar />
       <Hero />
-      <TechOverview />
-      <Applications />
-      <Achievements />
+      <Differentiation />
+      <RoadmapTeam />
 
-      <footer id="contact" className="border-t border-white/10 bg-[#060910] py-12 text-white">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-            <div>
-              <h4 className="text-lg font-semibold">Neural Drive</h4>
-              <p className="mt-1 text-sm text-white/70">Singapore • Silent‑Speech Interface — human‑centric neurotech.</p>
-            </div>
-            <nav className="flex gap-3 text-sm text-white/70">
-              <a href="#technology" className="hover:text-white">Technology</a>
-              <span className="text-white/30">•</span>
-              <a href="#applications" className="hover:text-white">Applications</a>
-              <span className="text-white/30">•</span>
-              <a href="#contact" className="hover:text-white">Contact</a>
-            </nav>
-          </div>
+      <footer className="border-t border-white/10 bg-[#060910] py-12 text-white">
+        <div className="mx-auto max-w-7xl px-6 text-center">
+          <h4 className="text-lg font-semibold">Neural Drive</h4>
+          <p className="mt-1 text-sm text-white/70">Singapore • Silent‑Speech Interface — human‑centric neurotech.</p>
+          <nav className="mt-4 flex items-center justify-center gap-3 text-sm text-white/70">
+            <a href="#differentiation" className="hover:text-white">Differentiation</a>
+            <span className="text-white/30">•</span>
+            <a href="#roadmap" className="hover:text-white">Roadmap</a>
+            <span className="text-white/30">•</span>
+            <a href="#team" className="hover:text-white">Team</a>
+            <span className="text-white/30">•</span>
+            <a href="#investors" className="hover:text-white">Investors</a>
+          </nav>
           <p className="mt-6 text-xs text-white/50">© {new Date().getFullYear()} Neural Drive — All rights reserved.</p>
         </div>
       </footer>
